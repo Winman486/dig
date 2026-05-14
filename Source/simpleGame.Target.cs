@@ -8,8 +8,12 @@ public class simpleGameTarget : TargetRules
 	public simpleGameTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
-		DefaultBuildSettings = BuildSettingsVersion.V5;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
+		// Change V5 to V6 as requested by the error message
+		DefaultBuildSettings = BuildSettingsVersion.V6; 
+		
+		// It is also recommended to set this to Latest for new engine versions
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest; 
+		
 		ExtraModuleNames.Add("simpleGame");
 	}
 }
